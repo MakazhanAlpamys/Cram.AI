@@ -1,83 +1,84 @@
-# Cram.AI: AI-Powered Cheat Sheet Generator
+# Cram.AI: Генератор шпаргалок на основе искусственного интеллекта
 
-Cram.AI is a web application that helps you create cheat sheets on any topic in various formats ready for printing. The application uses OpenAI's GPT models to generate content with LaTex formula support, preview functionality, and PDF export.
+Cram.AI — это веб-приложение, помогающее создавать шпаргалки на любую тему в различных форматах, готовые для печати. Приложение использует модели GPT от OpenAI для генерации контента с поддержкой формул в формате LaTeX, функцией предварительного просмотра и экспортом в PDF.
 
-## Features
+## Возможности
 
-- Generate cheat sheets on any topic using GPT-4 models
-- Support for mathematical formulas via LaTeX/MathJax
-- Two formats: classic cheat sheet and bottle wrapper
-- Customizable width and font size
-- PDF export with preserved formatting
-- Voice input support
-- Dark/light theme
+- Генерация шпаргалок на любые темы с использованием моделей GPT-4
+- Поддержка математических формул через LaTeX/MathJax
+- Два формата: классическая шпаргалка и обёртка для бутылки
+- Настраиваемая ширина и размер шрифта
+- Экспорт в PDF с сохранением форматирования
+- Поддержка голосового ввода
+- Тёмная/светлая тема оформления
 
-## Getting Started
+## Начало работы
 
-### Prerequisites
+### Требования
 
-- Web browser (Chrome, Firefox, Safari, Edge)
-- OpenAI API key (get one at [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys))
+- Веб-браузер (Chrome, Firefox, Safari, Edge)
+- API ключ OpenAI (получить на [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys))
 
-### Installation
+### Установка
 
-1. Clone the repository:
+1. Клонируйте репозиторий:
    ```
-   git clone https://github.com/yourusername/Cram.AI.git
+   git clone https://github.com/MakazhanAlpamys/Cram.AI.git
    cd Cram.AI
    ```
 
-2. Configure your OpenAI API key:
-   - Navigate to the `cram-app/js` directory
-   - Copy the template configuration file:
+2. Настройте свой API ключ OpenAI:
+   - Перейдите в каталог `cram-app/js`
+   - Скопируйте шаблон конфигурационного файла:
      ```
      cp config.template.js config.js
      ```
-   - Edit `config.js` and replace `"YOUR_API_KEY_HERE"` with your actual OpenAI API key
+   - Отредактируйте `config.js` и замените `"YOUR_API_KEY_HERE"` на ваш актуальный API ключ OpenAI
 
-3. Open the application:
-   - Double-click on `cram-app/index.html` or
-   - Use a local server (recommended for better experience):
+3. Откройте приложение:
+   - Дважды щелкните на `cram-app/index.html` или
+   - Используйте локальный сервер (рекомендуется для лучшего опыта):
      ```
-     # Using Python
+     # С помощью Python
      cd cram-app
      python -m http.server
      ```
-     Then open `http://localhost:8000` in your browser
+     Затем откройте `http://localhost:8000` в вашем браузере
 
-## Usage
+## Использование
 
-1. Enter the topic for your cheat sheet in the input field
-2. Click the arrow button or press Enter to generate
-3. Use the settings panel to customize:
-   - Format: Choose between "Шпора" (classic cheat sheet) or "Обёртка" (bottle wrapper)
-   - Font size: Adjust text size for better readability
-   - Width: Set the width of the cheat sheet (in centimeters)
-4. Click "Экспорт PDF" to save your cheat sheet as a PDF file
+1. Введите тему для вашей шпаргалки в поле ввода
+   - Можно использовать кнопку голосового ввода для голосового ввода темы
+2. Нажмите кнопку со стрелкой или клавишу Enter для генерации
+3. Используйте панель настроек для настройки:
+   - Формат: Выберите между "Шпора" (классическая шпаргалка) или "Обёртка" (для бутылки)
+   - Размер шрифта: Настройте размер текста для лучшей читаемости
+   - Ширина: Установите ширину шпаргалки (в сантиметрах)
+4. Нажмите "Экспорт PDF" для сохранения шпаргалки в файл PDF
 
-## Project Structure
+## Структура проекта
 
-- `index.html` - Main application file
+- `index.html` - Основной файл приложения
 - `js/`
-  - `config.js` - Configuration file (contains your API key)
-  - `app.js` - Main application logic
-  - `api.js` - API interaction with OpenAI
-  - `ui.js` - User interface related functions
-  - `layout.js` - Layout calculations
-  - `export.js` - PDF export functionality
-  - `voice.js` - Voice input functionality
-  - `utils.js` - Utility functions
+  - `config.js` - Конфигурационный файл (содержит ваш API ключ)
+  - `app.js` - Основная логика приложения
+  - `api.js` - Взаимодействие с API OpenAI
+  - `ui.js` - Функции пользовательского интерфейса
+  - `layout.js` - Расчеты макета
+  - `export.js` - Функциональность экспорта в PDF
+  - `voice.js` - Функциональность голосового ввода
+  - `utils.js` - Служебные функции
 - `css/`
-  - `styles.css` - Main stylesheet
-  - `animations.css` - Animation related styles
-- `img/` - Images and icons
+  - `styles.css` - Основная таблица стилей
+  - `animations.css` - Стили анимаций
+- `img/` - Изображения и иконки
 
-## License
+## Лицензия
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Этот проект лицензирован по лицензии MIT - см. файл LICENSE для подробностей.
 
-## Acknowledgments
+## Благодарности
 
-- OpenAI for providing the GPT API
-- MathJax for LaTeX rendering
-- Tailwind CSS for styling
+- OpenAI за предоставление API GPT
+- MathJax за рендеринг LaTeX формул
+- Tailwind CSS для стилизации
